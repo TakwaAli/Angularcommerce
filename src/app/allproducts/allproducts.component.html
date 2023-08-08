@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div *ngIf="alertcart" class="alert alert-success m-2 w-50 m-auto">
+    {{alertmessage}}
+         </div>
+    <div class="row" >
+      
+        <div  *ngFor="let product of products" class='col-md-2'>
+     
+            <div  class='product px-2 py-3 cursor-pointer'>
+             
+                <a [routerLink]='["/details",product.id]'>
+                <img class='w-100' [src]="product.imageCover"/>
+                </a>
+                 
+                  <span class='text-main fw-bold font-sm'>{{product.category.name}}</span>
+                <h3 class='h6 fw-bolder'>{{product.title.split(' ').slice(0,2).join('  ')}}</h3>
+               <div class='d-flex justify-content-between'>
+                <span class='text-muted'>{{product.price}}EGP</span>
+                <span >
+                  <i class='fas fa-star rating-color'></i>
+                  {{product.ratingsAverage}}
+                  </span>
+               </div>
+               <button (click)="AddToCart(product.id)" class='btn bg-main text-white w-100'>+ Add</button>
+                </div>
+           
+       </div>
+    
+    </div>
+    </div>

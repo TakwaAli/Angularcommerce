@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div class="row" >
+        <div  *ngFor="let category of categories" class='col-md-2'>
+     
+            <div  class='product px-2 py-3 cursor-pointer'>
+             
+                <a >
+                <img class='w-100 mg-hieght' [src]="category.image"/>
+                </a>
+                 
+                  <span class='text-main fw-bold font-sm'>{{category.name}}</span>
+                <h3 class='h6 fw-bolder'>createdAt: {{category.createdAt}}</h3>
+             
+               
+                </div>
+           
+       </div>
+    
+    </div>
+    </div>
