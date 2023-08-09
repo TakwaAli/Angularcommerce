@@ -21,7 +21,7 @@ constructor(private AllproductsService:AllproductsService ,private _cartservices
 
 }
   ngOnInit(): void {
-   this.AddToCart('')
+  // this.AddToCart('')
    //"6428ebc6dc1175abc65ca0b9"
   }
   AddToCart(id:string){
